@@ -9,7 +9,7 @@ def total_salary(path):
                 salary.append(line.split(',')[1])
         """Оголошуємо змінну salary, яка є списком, построково накопичує інформацію про зарплату співробітників, попередньо очищену від прізвищ та імен"""
     
-        salary_int = [int(x) for x in salary]
+        salary_int = [float(x) for x in salary]
         """Перетворення формату з рядка на цілі числа"""
     
         total = round(sum(salary_int))

@@ -11,7 +11,7 @@ def get_cats_info(path):
                 cat_dict = dict()
                 cat_dict["id"] = line.split(',')[0]
                 cat_dict["name"] = line.split(',')[1]
-                cat_dict["age"] = int(line.split(',')[2])
+                cat_dict["age"] = line.split(',')[2]
                 cats_dict.append(cat_dict)
         
         """Оголошуємо змінну cat_dict, яка є словником, построково накопичує інформацію про одного кота за допомогою ключів "id", "name", "age" та і додається до загального списку"""
@@ -20,7 +20,7 @@ def get_cats_info(path):
         """Функція повертає список словників, де кожен словник містить інформацію про одного кота""" 
 
     except Exception as e:
-        print(f'(e) with file')
+        print(f'{e} with file')
 
 cats_info = get_cats_info("./task_2/cats_info.txt")
 print(cats_info)
